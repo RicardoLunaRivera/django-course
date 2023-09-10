@@ -1,0 +1,16 @@
+#navbar {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 30px;
+    color: blueviolet;
+}
+
+#logo{
+    height: 90px;
+}

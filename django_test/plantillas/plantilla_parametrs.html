@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantilla con parametros</title>
+    <style>
+      li {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nombre : {{nombre}}</h1>
+    <h2>Fecha : {{fecha_actual}}</h2>
+    <h3>
+      Fecha : D&iacute;a:{{fecha_actual.day}} - Mes: {{fecha_actual.month}}
+    </h3>
+    <h3>
+      Fecha : {{fecha_actual.day}} / {{fecha_actual.month}} /
+      {{fecha_actual.year}}
+    </h3>
+
+    <h4>N&uacute;mero de lenguajes : {{lenguajes|length}}</h4>
+
+    <h4>
+      {% for lenguaje in lenguajes %} {% if lenguaje == 'Python' %}
+      <li style="color: green">{{lenguaje}}</li>
+      {% else %}
+      <li>{{lenguaje}}</li>
+      {% endif %} {% endfor %}
+    </h4>
+    <! MUESTRA LOS LENGUAJES EN MINÚSCULAS>
+    <h4>
+      {% for lenguaje in lenguajes %} {% if lenguaje == 'Python' %}
+      <li style="color: green">{{lenguaje}}</li>
+      {% else %}
+      <li>{{lenguaje|first}} : {{lenguaje|lower}}</li>
+      {% endif %} {% endfor %}
+    </h4>
+    {# MUESTRA LOS LENGUAJES EN MAYÚSCULAS#}
+    <h4>
+      {% for lenguaje in lenguajes %} {% if lenguaje == 'Python' %}
+      <li style="color: green">{{lenguaje}}</li>
+      {% else %}
+      <li>{{lenguaje|upper}}</li>
+      {% endif %} {% endfor %}
+    </h4>
+
+    <!- "Para poder encontrar cuales filtros podemos utilizar, se puede
+    consultar en la documentación de Django:
+    https://docs.djangoproject.com/en/4.2/ref/templates/builtins/"
+    endcomment >
+  </body>
+</html>

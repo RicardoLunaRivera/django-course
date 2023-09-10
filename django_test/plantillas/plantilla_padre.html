@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock title %}</title>
+    <link
+      rel="stylesheet"
+      href='{% static "css/plantilla_barra_navegacion.css" %}'
+    />
+  </head>
+  <body>
+    {% include './plantilla_barra_navegacion.html' %}
+    <img src="{%static 'imgs/logo.png'%}" alt="logo" id="logo" />
+    {% block content %} {% endblock content %}
+    <p>Pie de p&aacute;gina</p>
+
+    <script src="{% static 'js/plantilla_padre.js' %}"></script>
+  </body>
+</html>

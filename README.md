@@ -13,6 +13,18 @@ Sigue el modelo de arquitectura MTV( Model Template View).
 - View : Decide cuáles datos va a mostrar el template.
 
 ```sh
- pip intall django
- django-admin startproject <name_project>
+ pip intall django # instalar django
+
+ django-admin startproject <name_project> # crear un proyecto
+
+ python manage.py runserver # par ainiciar el servidor de django
 ```
+
+![alt](./imgs/Estructura_project_django.png)
+
+- init.py -> Indica a python que la carpeta es un paquete
+- asgi.py -> Asynchronous Server Gateway Interface
+- wsgi.py Web Server Gateway Interface
+- settings.py -> configuraciones del proyecto
+- urls.py -> URLS del proyecto
+- views.py -> vistas para el proyecto
