@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Curso
+from .models import Curso, Docente
 
 # Register your models here.
 
@@ -17,3 +17,6 @@ class CursoAdmin (admin.ModelAdmin):
     # exclude = ('creditos',)  # no permite editar el campo indicado
 # admin.site.register(Curso)
 # admin.site.register(Curso, CursoAdmin)
+
+
+admin.site.register(Docente)
